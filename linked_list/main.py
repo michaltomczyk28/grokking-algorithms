@@ -7,12 +7,15 @@ class LinkedList:
     def __init__(self) -> None:
         self.head = None
     
+    # O(1)
     def unshift(self, value):
         self.head = Node(value, self.head)
 
+    # O(1)
     def shift(self):
         self.head = self.head.next
 
+    # O(n)
     def push(self, value):
         newNode = Node(value)
 
@@ -26,6 +29,7 @@ class LinkedList:
         
         current.next = newNode
 
+    # O(n)
     def pop(self):
         if self.head == None:
             return
